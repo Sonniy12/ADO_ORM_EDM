@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Car_washModelContainer" CdmEntityContainer="Connect">
+    <EntitySetMapping Name="basket">
+      <EntityTypeMapping TypeName="Car_washModel.basket">
+        <MappingFragment StoreEntitySet="basket">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fk_services" ColumnName="fk_services" />
+          <ScalarProperty Name="fk_client_new" ColumnName="fk_client_new" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client_reserv">
+      <EntityTypeMapping TypeName="Car_washModel.Client_reserv">
+        <MappingFragment StoreEntitySet="Client_reserv">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Date_reserv">
+      <EntityTypeMapping TypeName="Car_washModel.Date_reserv">
+        <MappingFragment StoreEntitySet="Date_reserv">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="fk_client" ColumnName="fk_client" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="services">
+      <EntityTypeMapping TypeName="Car_washModel.services">
+        <MappingFragment StoreEntitySet="services">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name_sevices" ColumnName="name_sevices" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

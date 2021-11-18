@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Car_washModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="basket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fk_services" Type="int" />
+    <Property Name="fk_client_new" Type="int" />
+  </EntityType>
+  <EntityType Name="Client_reserv">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Date_reserv">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="date" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="fk_client" Type="int" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_sevices" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="price" Type="money" />
+  </EntityType>
+  <Association Name="FK__basket__fk_clien__48CFD27E">
+    <End Role="Client_reserv" Type="Self.Client_reserv" Multiplicity="0..1" />
+    <End Role="basket" Type="Self.basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client_reserv">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="basket">
+        <PropertyRef Name="fk_client_new" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__basket__fk_servi__47DBAE45">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="basket" Type="Self.basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="basket">
+        <PropertyRef Name="fk_services" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Date_rese__fk_cl__4316F928">
+    <End Role="Client_reserv" Type="Self.Client_reserv" Multiplicity="0..1" />
+    <End Role="Date_reserv" Type="Self.Date_reserv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client_reserv">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Date_reserv">
+        <PropertyRef Name="fk_client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Car_washModelContainer">
+    <EntitySet Name="basket" EntityType="Self.basket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client_reserv" EntityType="Self.Client_reserv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Date_reserv" EntityType="Self.Date_reserv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="services" EntityType="Self.services" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__basket__fk_clien__48CFD27E" Association="Self.FK__basket__fk_clien__48CFD27E">
+      <End Role="Client_reserv" EntitySet="Client_reserv" />
+      <End Role="basket" EntitySet="basket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__basket__fk_servi__47DBAE45" Association="Self.FK__basket__fk_servi__47DBAE45">
+      <End Role="services" EntitySet="services" />
+      <End Role="basket" EntitySet="basket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Date_rese__fk_cl__4316F928" Association="Self.FK__Date_rese__fk_cl__4316F928">
+      <End Role="Client_reserv" EntitySet="Client_reserv" />
+      <End Role="Date_reserv" EntitySet="Date_reserv" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

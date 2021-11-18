@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Car_washModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="basket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_services" Type="Int32" />
+    <Property Name="fk_client_new" Type="Int32" />
+    <NavigationProperty Name="Client_reserv" Relationship="Self.FK__basket__fk_clien__48CFD27E" FromRole="basket" ToRole="Client_reserv" />
+    <NavigationProperty Name="services" Relationship="Self.FK__basket__fk_servi__47DBAE45" FromRole="basket" ToRole="services" />
+  </EntityType>
+  <EntityType Name="Client_reserv">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="basket" Relationship="Self.FK__basket__fk_clien__48CFD27E" FromRole="Client_reserv" ToRole="basket" />
+    <NavigationProperty Name="Date_reserv" Relationship="Self.FK__Date_rese__fk_cl__4316F928" FromRole="Client_reserv" ToRole="Date_reserv" />
+  </EntityType>
+  <EntityType Name="Date_reserv">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="fk_client" Type="Int32" />
+    <NavigationProperty Name="Client_reserv" Relationship="Self.FK__Date_rese__fk_cl__4316F928" FromRole="Date_reserv" ToRole="Client_reserv" />
+  </EntityType>
+  <EntityType Name="services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_sevices" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="basket" Relationship="Self.FK__basket__fk_servi__47DBAE45" FromRole="services" ToRole="basket" />
+  </EntityType>
+  <Association Name="FK__basket__fk_clien__48CFD27E">
+    <End Role="Client_reserv" Type="Self.Client_reserv" Multiplicity="0..1" />
+    <End Role="basket" Type="Self.basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client_reserv">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="basket">
+        <PropertyRef Name="fk_client_new" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__basket__fk_servi__47DBAE45">
+    <End Role="services" Type="Self.services" Multiplicity="0..1" />
+    <End Role="basket" Type="Self.basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="services">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="basket">
+        <PropertyRef Name="fk_services" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Date_rese__fk_cl__4316F928">
+    <End Role="Client_reserv" Type="Self.Client_reserv" Multiplicity="0..1" />
+    <End Role="Date_reserv" Type="Self.Date_reserv" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client_reserv">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Date_reserv">
+        <PropertyRef Name="fk_client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Connect" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="basket" EntityType="Self.basket" />
+    <EntitySet Name="Client_reserv" EntityType="Self.Client_reserv" />
+    <EntitySet Name="Date_reserv" EntityType="Self.Date_reserv" />
+    <EntitySet Name="services" EntityType="Self.services" />
+    <AssociationSet Name="FK__basket__fk_clien__48CFD27E" Association="Self.FK__basket__fk_clien__48CFD27E">
+      <End Role="Client_reserv" EntitySet="Client_reserv" />
+      <End Role="basket" EntitySet="basket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__basket__fk_servi__47DBAE45" Association="Self.FK__basket__fk_servi__47DBAE45">
+      <End Role="services" EntitySet="services" />
+      <End Role="basket" EntitySet="basket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Date_rese__fk_cl__4316F928" Association="Self.FK__Date_rese__fk_cl__4316F928">
+      <End Role="Client_reserv" EntitySet="Client_reserv" />
+      <End Role="Date_reserv" EntitySet="Date_reserv" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

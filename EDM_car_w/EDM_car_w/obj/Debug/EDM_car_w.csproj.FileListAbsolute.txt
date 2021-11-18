@@ -1,0 +1,51 @@
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.exe.config
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.exe
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.pdb
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.dll
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.SqlServer.dll
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.xml
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.SqlServer.xml
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csprojAssemblyReference.cache
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form1.resources
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Properties.Resources.resources
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.GenerateResource.cache
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.CoreCompileInputs.cache
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.CopyComplete
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.exe
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.pdb
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form2.resources
+C:\AКАДЕМИЯ шаг\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form3.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.exe.config
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.exe
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.pdb
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.dll
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.SqlServer.dll
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.xml
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.SqlServer.xml
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csprojAssemblyReference.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form1.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form2.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form3.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Properties.Resources.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.GenerateResource.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.CoreCompileInputs.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.CopyComplete
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.exe
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.pdb
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.exe.config
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.exe
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EDM_car_w.pdb
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.dll
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.SqlServer.dll
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.xml
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\bin\Debug\EntityFramework.SqlServer.xml
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csprojAssemblyReference.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form1.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form2.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Form3.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.Properties.Resources.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.GenerateResource.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.CoreCompileInputs.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.csproj.CopyComplete
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.exe
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL_HTML\5_ADO_NET\EDM_car_w\EDM_car_w\obj\Debug\EDM_car_w.pdb

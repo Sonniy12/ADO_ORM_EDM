@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model_travel_company" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model_travel_companyContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tripSet" EntityType="Model_travel_company.trip" />
+    <EntitySet Name="customersSet" EntityType="Model_travel_company.customers" />
+    <AssociationSet Name="tripcustomers" Association="Model_travel_company.tripcustomers">
+      <End Role="trip" EntitySet="tripSet" />
+      <End Role="customers" EntitySet="customersSet" />
+    </AssociationSet>
+    <EntitySet Name="travel_agentSet" EntityType="Model_travel_company.travel_agent" />
+    <EntitySet Name="client_baseSet" EntityType="Model_travel_company.client_base" />
+    <AssociationSet Name="client_basetravel_agent" Association="Model_travel_company.client_basetravel_agent">
+      <End Role="client_base" EntitySet="client_baseSet" />
+      <End Role="travel_agent" EntitySet="travel_agentSet" />
+    </AssociationSet>
+    <AssociationSet Name="client_basetrip" Association="Model_travel_company.client_basetrip">
+      <End Role="client_base" EntitySet="client_baseSet" />
+      <End Role="trip" EntitySet="tripSet" />
+    </AssociationSet>
+    <AssociationSet Name="client_basecustomers" Association="Model_travel_company.client_basecustomers">
+      <End Role="client_base" EntitySet="client_baseSet" />
+      <End Role="customers" EntitySet="customersSet" />
+    </AssociationSet>
+    <EntitySet Name="Creat_table_baseClientSet" EntityType="Model_travel_company.Creat_table_baseClient" />
+    <AssociationSet Name="Creat_table_baseClienttrip" Association="Model_travel_company.Creat_table_baseClienttrip">
+      <End Role="Creat_table_baseClient" EntitySet="Creat_table_baseClientSet" />
+      <End Role="trip" EntitySet="tripSet" />
+    </AssociationSet>
+    <AssociationSet Name="Creat_table_baseClientcustomers" Association="Model_travel_company.Creat_table_baseClientcustomers">
+      <End Role="Creat_table_baseClient" EntitySet="Creat_table_baseClientSet" />
+      <End Role="customers" EntitySet="customersSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="trip">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="true" FixedLength="true" MaxLength="30" />
+    <Property Name="departure" Type="DateTime" Nullable="true" />
+    <NavigationProperty Name="customers" Relationship="Model_travel_company.tripcustomers" FromRole="trip" ToRole="customers" />
+    <NavigationProperty Name="client_base" Relationship="Model_travel_company.client_basetrip" FromRole="trip" ToRole="client_base" />
+    <Property Name="client_baseId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Creat_table_baseClient" Relationship="Model_travel_company.Creat_table_baseClienttrip" FromRole="trip" ToRole="Creat_table_baseClient" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" />
+    <Property Name="last_name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" />
+    <NavigationProperty Name="trip" Relationship="Model_travel_company.tripcustomers" FromRole="customers" ToRole="trip" />
+    <NavigationProperty Name="client_base" Relationship="Model_travel_company.client_basecustomers" FromRole="customers" ToRole="client_base" />
+    <Property Name="client_baseId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Creat_table_baseClient" Relationship="Model_travel_company.Creat_table_baseClientcustomers" FromRole="customers" ToRole="Creat_table_baseClient" />
+  </EntityType>
+  <Association Name="tripcustomers">
+    <End Type="Model_travel_company.trip" Role="trip" Multiplicity="1" />
+    <End Type="Model_travel_company.customers" Role="customers" Multiplicity="1" />
+  </Association>
+  <EntityType Name="travel_agent">
+    <Key>
+      <PropertyRef Name="last_name" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" />
+    <Property Name="last_name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" />
+    <NavigationProperty Name="client_base" Relationship="Model_travel_company.client_basetravel_agent" FromRole="travel_agent" ToRole="client_base" />
+    <Property Name="client_baseId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_base">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fk_l_name" Type="String" Nullable="true" MaxLength="50" />
+    <Property Name="id_trip" Type="Int32" Nullable="true" />
+    <Property Name="id_client" Type="Int32" Nullable="true" />
+    <NavigationProperty Name="travel_agent" Relationship="Model_travel_company.client_basetravel_agent" FromRole="client_base" ToRole="travel_agent" />
+    <NavigationProperty Name="trip" Relationship="Model_travel_company.client_basetrip" FromRole="client_base" ToRole="trip" />
+    <NavigationProperty Name="customers" Relationship="Model_travel_company.client_basecustomers" FromRole="client_base" ToRole="customers" />
+  </EntityType>
+  <Association Name="client_basetravel_agent">
+    <End Type="Model_travel_company.client_base" Role="client_base" Multiplicity="1" />
+    <End Type="Model_travel_company.travel_agent" Role="travel_agent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_base">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="travel_agent">
+        <PropertyRef Name="client_baseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="client_basetrip">
+    <End Type="Model_travel_company.client_base" Role="client_base" Multiplicity="1" />
+    <End Type="Model_travel_company.trip" Role="trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_base">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="trip">
+        <PropertyRef Name="client_baseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="client_basecustomers">
+    <End Type="Model_travel_company.client_base" Role="client_base" Multiplicity="1" />
+    <End Type="Model_travel_company.customers" Role="customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_base">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="customers">
+        <PropertyRef Name="client_baseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Creat_table_baseClient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_trip_new" Type="Int32" Nullable="true" />
+    <Property Name="id_client_new" Type="Int32" Nullable="true" />
+    <NavigationProperty Name="trip" Relationship="Model_travel_company.Creat_table_baseClienttrip" FromRole="Creat_table_baseClient" ToRole="trip" />
+    <NavigationProperty Name="customers" Relationship="Model_travel_company.Creat_table_baseClientcustomers" FromRole="Creat_table_baseClient" ToRole="customers" />
+  </EntityType>
+  <Association Name="Creat_table_baseClienttrip">
+    <End Type="Model_travel_company.Creat_table_baseClient" Role="Creat_table_baseClient" Multiplicity="*" />
+    <End Type="Model_travel_company.trip" Role="trip" Multiplicity="*" />
+  </Association>
+  <Association Name="Creat_table_baseClientcustomers">
+    <End Type="Model_travel_company.Creat_table_baseClient" Role="Creat_table_baseClient" Multiplicity="*" />
+    <End Type="Model_travel_company.customers" Role="customers" Multiplicity="*" />
+  </Association>
+</Schema>

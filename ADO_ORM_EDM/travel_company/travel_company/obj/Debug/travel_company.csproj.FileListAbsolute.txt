@@ -1,0 +1,4 @@
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\travel_company\travel_company\obj\Debug\travel_company.csprojAssemblyReference.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\travel_company\travel_company\obj\Debug\travel_company.Properties.Resources.resources
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\travel_company\travel_company\obj\Debug\travel_company.csproj.GenerateResource.cache
+C:\AКАДЕМИЯ шаг\1_D_Домашняя работа\1_C#_SQL\5_ADO_NET\travel_company\travel_company\obj\Debug\travel_company.csproj.CoreCompileInputs.cache

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model_travel_companyStoreContainer" CdmEntityContainer="Model_travel_companyContainer">
+    <EntitySetMapping Name="tripSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model_travel_company.trip)">
+        <MappingFragment StoreEntitySet="tripSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="departure" ColumnName="departure" />
+          <ScalarProperty Name="client_baseId" ColumnName="client_baseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customersSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model_travel_company.customers)">
+        <MappingFragment StoreEntitySet="customersSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="client_baseId" ColumnName="client_baseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="travel_agentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model_travel_company.travel_agent)">
+        <MappingFragment StoreEntitySet="travel_agentSet">
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="client_baseId" ColumnName="client_baseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_baseSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model_travel_company.client_base)">
+        <MappingFragment StoreEntitySet="client_baseSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="fk_l_name" ColumnName="fk_l_name" />
+          <ScalarProperty Name="id_trip" ColumnName="id_trip" />
+          <ScalarProperty Name="id_client" ColumnName="id_client" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Creat_table_baseClientSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model_travel_company.Creat_table_baseClient)">
+        <MappingFragment StoreEntitySet="Creat_table_baseClientSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="id_trip_new" ColumnName="id_trip_new" />
+          <ScalarProperty Name="id_client_new" ColumnName="id_client_new" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tripcustomers" TypeName="Model_travel_company.tripcustomers" StoreEntitySet="tripSet">
+      <EndProperty Name="customers">
+        <ScalarProperty Name="Id" ColumnName="customers_Id" />
+      </EndProperty>
+      <EndProperty Name="trip">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Creat_table_baseClienttrip" TypeName="Model_travel_company.Creat_table_baseClienttrip" StoreEntitySet="Creat_table_baseClienttrip">
+      <EndProperty Name="Creat_table_baseClient">
+        <ScalarProperty Name="Id" ColumnName="Creat_table_baseClient_Id" />
+      </EndProperty>
+      <EndProperty Name="trip">
+        <ScalarProperty Name="Id" ColumnName="trip_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Creat_table_baseClientcustomers" TypeName="Model_travel_company.Creat_table_baseClientcustomers" StoreEntitySet="Creat_table_baseClientcustomers">
+      <EndProperty Name="Creat_table_baseClient">
+        <ScalarProperty Name="Id" ColumnName="Creat_table_baseClient_Id" />
+      </EndProperty>
+      <EndProperty Name="customers">
+        <ScalarProperty Name="Id" ColumnName="customers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

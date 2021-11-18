@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Hero_of_the_gameModelContainer" CdmEntityContainer="Hero_of_the_gameEntities">
+    <EntitySetMapping Name="Characteristics_hero">
+      <EntityTypeMapping TypeName="Hero_of_the_gameModel.Characteristics_hero">
+        <MappingFragment StoreEntitySet="Characteristics_hero">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name_hero" ColumnName="name_hero" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="specialized" ColumnName="specialized" />
+          <ScalarProperty Name="fk_hero" ColumnName="fk_hero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hero">
+      <EntityTypeMapping TypeName="Hero_of_the_gameModel.Hero">
+        <MappingFragment StoreEntitySet="Hero">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
